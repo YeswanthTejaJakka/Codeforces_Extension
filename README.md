@@ -264,7 +264,7 @@ This project is licensed under the MIT License.
 
 # 👨‍💻 Author
 
-**Purandhar Sai**
+**J Yeswanth Teja**
 
 IIT Ropar
 
