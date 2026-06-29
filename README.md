@@ -1,70 +1,271 @@
-# Getting Started with Create React App
+# 🚀 Codeforces Analytics Hub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-19-blue?logo=react)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-38BDF8?logo=tailwindcss)
+![Chart.js](https://img.shields.io/badge/Chart.js-Visualization-FF6384?logo=chartdotjs)
+![Codeforces API](https://img.shields.io/badge/API-Codeforces-orange)
 
-In the project directory, you can run:
+**A modern dashboard for analyzing Codeforces user profiles with rich visual insights and performance analytics.**
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 📖 Overview
 
-### `npm test`
+Codeforces Analytics Hub is a React-based analytics dashboard that provides a comprehensive overview of a programmer's Codeforces profile.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Instead of simply displaying ratings, the application transforms a user's submission history into meaningful insights such as:
 
-### `npm run build`
+* Rating statistics
+* Topic-wise strengths and weaknesses
+* Solved problem distribution
+* Weak topic detection
+* Unsolved backlog
+* Upcoming contests
+* Recent submissions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project is designed with a clean and modular architecture using reusable React components.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# ✨ Features
 
-### `npm run eject`
+### 👤 User Analytics
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Search any Codeforces handle
+* Current Rating
+* Current Rank
+* Maximum Rating
+* Maximum Rank
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 📊 Difficulty Distribution
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Visualizes solved problems according to their difficulty ratings using interactive bar charts.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🥧 Topic Distribution
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Displays solved problems grouped by tags using Chart.js Pie Charts.
 
-### Code Splitting
+Examples:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* DP
+* Graphs
+* Greedy
+* Binary Search
+* Trees
+* Math
+* Implementation
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 🎯 Weak Topic Detection
 
-### Making a Progressive Web App
+Automatically identifies the weakest topics based on
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* Total attempts
+* Accepted submissions
+* Success percentage
 
-### Advanced Configuration
+Only statistically significant topics are considered.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+### ❌ Unsolved Backlog
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Shows every attempted but unsolved problem with direct links to Codeforces.
 
-### `npm run build` fails to minify
+Perfect for revision.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+### 📅 Upcoming Contests
+
+Displays upcoming Codeforces contests fetched directly from the official API.
+
+Includes
+
+* Contest Name
+* Date
+* Time Remaining
+
+---
+
+### 📜 Recent Activity
+
+Shows the latest submissions including
+
+* Problem Name
+* Programming Language
+* Verdict
+* Submission Date
+
+---
+
+# 🛠 Tech Stack
+
+| Technology       | Purpose             |
+| ---------------- | ------------------- |
+| React            | Frontend Framework  |
+| JavaScript (ES6) | Application Logic   |
+| Tailwind CSS     | Styling             |
+| Chart.js         | Data Visualization  |
+| Codeforces API   | User & Contest Data |
+| Vite / CRA       | Build Tool          |
+
+---
+
+# 📂 Project Structure
+
+```text
+src/
+│
+├── assets/
+│
+├── components/
+│   ├── Header.jsx
+│   ├── SearchBar.jsx
+│   ├── Stats/
+│   ├── Charts/
+│   ├── Tables/
+│   ├── UpcomingContests.jsx
+│   ├── UnsolvedProblems.jsx
+│   └── Loader.jsx
+│
+├── hooks/
+│   └── useCodeforces.js
+│
+├── services/
+│   └── codeforcesApi.js
+│
+├── utils/
+│   ├── analytics.js
+│   └── rankColors.js
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+# ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/yourusername/codeforces-analytics.git
+```
+
+Move into the project
+
+```bash
+cd codeforces-analytics
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run locally
+
+```bash
+npm run dev
+```
+
+---
+
+# 🌐 Codeforces APIs Used
+
+### User Information
+
+```
+https://codeforces.com/api/user.info
+```
+
+### User Submissions
+
+```
+https://codeforces.com/api/user.status
+```
+
+### Contest List
+
+```
+https://codeforces.com/api/contest.list
+```
+
+---
+
+# 📈 Dashboard Includes
+
+* Rating Analytics
+* Peak Rating
+* Topic Analysis
+* Solved Difficulty Distribution
+* Weakest Topics
+* Recent Activity
+* Upcoming Contests
+* Unsolved Problems
+
+---
+
+# 🎨 UI Highlights
+
+* Responsive Design
+* Dark Theme
+* Interactive Charts
+* Smooth Hover Effects
+* Clean Typography
+* Modern Dashboard Layout
+
+---
+
+# 🚀 Future Improvements
+
+* Authentication
+* Daily Problem Recommendations
+* Virtual Contest Tracker
+* Rating Prediction
+* Heatmaps
+* Contest History Graph
+* Friend Comparison
+* Export Analytics as PDF
+* AI-based Topic Recommendations
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Push the branch.
+5. Open a Pull Request.
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+# 👨‍💻 Author
+
+**Purandhar Sai**
+
+IIT Ropar
+
+If you like this project, consider giving it a ⭐ on GitHub.
